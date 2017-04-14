@@ -1,0 +1,28 @@
+<!-- profile.ejs -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <%- include('./partials/head'); %>
+</head>
+<body>
+	<header>
+	    <%- include('./partials/header'); %>
+	</header>
+    <div class="content">
+		<h1><%= title %></h1>
+		<p>Welcome to <%= title %></p>
+
+		<!-- LOCAL INFORMATION -->
+        <div>
+            <p>
+                <strong>Id</strong>: <%= user._id %><br>
+                <strong>First name</strong>: <%= user.local.firstname %><br>
+                <strong>Last name</strong>: <%= user.local.lastname %><br>
+                <strong>Email</strong>: <%= user.local.email %><br>
+            </p>
+        </div>
+
+	</div>
+</body>	
+
+</html>

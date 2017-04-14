@@ -1,0 +1,62 @@
+<!-- signup.ejs -->
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <%- include('./partials/head'); %>
+</head>
+<body>
+	<header>
+	    <%- include('./partials/header'); %>
+	</header>
+
+    <div class="content">
+
+	    <!-- show any messages that come back with authentication 
+	    <% if (message.length > 0) { %>
+	        <div><%= message %></div>
+	    <% } %> -->
+	    
+	    
+		<!-- REGISTER FORM -->
+		<form action="/signup" method="post">
+		    <div>
+		        <label>First name</label>
+		        <input type="text" name="firstname">
+		    </div>
+			<div>
+		        <label>Last name</label>
+		        <input type="text" name="lastname">
+		    </div>
+			<div>
+		        <label>Username</label>
+		        <input type="text" name="username">
+		    </div>
+			<div>
+		        <label>Email</label>
+		        <input type="text" name="email">
+		    </div>
+		    <div>
+		        <label>Password</label>
+		        <input type="password" name="password">
+		    </div>
+		    <div>
+		        <label>Confirm password</label>
+		        <input type="password" name="passwordConfirm">
+		    </div>
+
+		    <button type="submit">Sign Up</button>
+		</form>
+
+		<hr>
+
+		<p>Already have an account? <a href="/login">Login</a></p>
+		<p>Or go <a href="/">home</a>.</p>
+
+	</div>
+</body>	
+
+</html>
+
+
